@@ -1,0 +1,19 @@
+{
+  "name": "random-name-generator",
+  "version": "1.0.0",
+  "description": "A project to generate random character names based on user inputs.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "keywords": [
+    "name",
+    "generator",
+    "random",
+    "character"
+  ],
+  "author": "",
+  "license": "ISC"
+}
