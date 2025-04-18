@@ -1,4 +1,4 @@
-name: Windows Runner Example
+name: Random Name Generator CI
 on: push
 jobs:
   build:
@@ -6,5 +6,17 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      - name: Run a PowerShell command
-        run: Get-Process | Select-Object -First 5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build the project
+        run: npm run build
+
+      - name: Start the application
+        run: npm start
